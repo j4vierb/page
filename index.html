@@ -17,22 +17,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Introducción</a>
+            <a class="nav-link active text-white" aria-current="page" href="#introduccion">Introducción</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Propiedades</a>
+            <a class="nav-link active text-white" aria-current="page" href="#propiedades">Propiedades</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Tipos de arboles</a>
+            <a class="nav-link active text-white" aria-current="page" href="#tipos">Tipos de arboles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Algoritmos comunes</a>
+            <a class="nav-link active text-white" aria-current="page" href="#problemas">Problemas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Problemas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Formulario</a>
+            <a class="nav-link active text-white" aria-current="page" href="#formulario">Formulario</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active text-white" aria-current="page" href="#">Fuentes</a>
@@ -45,10 +42,10 @@
   <main class="container my-4">
     <h1 class="text-center">Arboles</h2>
 
-    <h2 class="text-left">1. Introducción</h2>
+    <h2 class="text-left" id="introduccion">1. Introducción</h2>
     <div class="row">
-      <div class="col">
-        <figure class="d-flex justify-content-center align-items-center flex-column">
+      <div class="col d-flex justify-content-center align-items-center flex-column">
+        <figure class="">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Tree_%28computer_science%29.svg/330px-Tree_%28computer_science%29.svg.png" class="fig-1" alt="tree image"/>
           <figcaption>Figura 1. Representación gráfica de un arbol.</figcaption>
         </figure>
@@ -59,7 +56,7 @@
       </div>
     </div>
     
-    <h2>2. Propiedades</h2>
+    <h2 id="propiedades">2. Propiedades</h2>
     Las propiedades de un arbol son las que se encuentran en la siguiente tabla.
     <table class="table table-striped">
       <thead>
@@ -70,46 +67,68 @@
       </thead>
       <tbody class="table-striped">
         <tr>
-          <td>Altura</td>
-          <td>La altura de un arbol es la longitud del camino más largo desde la raiz hasta una hoja.</td>
+          <td>Grado de un nodo</td>
+          <td>El grado de un nodo es el número de hijos que posee en el arbol.</td>
         </tr>
         <tr>
-          <td>Profundidad</td>
-          <td>La profundidad de un nodo es la longitud del camino desde la raiz hasta el nodo.</td>
+          <td>Grado del arbol</td>
+          <td>El grado del arbol corresponde al máximo grado posible de un nodo en el arbol.</td>
         </tr>
         <tr>
-          <td>Grado</td>
-          <td>El grado de un nodo es el número de hijos que tiene.</td>
+          <td>Nivel</td>
+          <td>El nivel de un nodo es el número de aristas que se encuentran en un camino desde el origen hasta el respectivo nodo.</td>
+        </tr>
+        <tr>
+          <td>Anchura</td>
+          <td>El número de nodos en un nivel.</td>
+        </tr>
+        <tr>
+          <td>Tamaño</td>
+          <td>El número de nodos en total del árbol.</td>
         </tr>
       </tbody>
     </table>
 
-    <h2>3. Tipos de arboles</h2>
+    <h2 id="tipos">3. Tipos de arboles</h2>
+    <p>
+      Uno de los arboles más comunes son los <b>arboles de busqueda binaria (BST)</b>. Estos arboles cumplen con la propiedad de que para cada nodo, el valor de la izquierda es menor que el valor del nodo y el valor de la derecha es mayor que el valor del nodo. Además, como se almacena de manera ordenada, la búsqueda de un elemento en un arbol de busqueda binaria es de complejidad O(log n). Sin embargo, si a un arbol de busqueda binaria se le insertan elementos de manera ordenada, la complejidad de la busqueda se convierte en O(n). Esto da lugar a que se necesiten <b>arboles balanceados</b>, donde las alturas de dos subárboles de todo modo difiere de máximo 1.
+    </p>
 
-    <h2>4. Algoritmos comunes</h2>
+    <p>
+      Debido al problema antes mencionado sobre el balanceo surgieron otro tipo de arboles, los <b>arboles de rojo-negro</b>. Esto arboles tienen una caracteristica especial y es que se balancean así mismos para mantener una busqueda de O(log n) en todo momento. El balanceo lo realizan marcando los nodos de rojo o negro según corresponda y siguiendo una serie de reglas al insertar un nodo, esto último garantiza una busqueda constante.
+    </p>
 
-    <h2>5. Problemas</h2>
-    <p>El siguiente listado contiene enlaces a distintos problemas sobre arboles. Entre estas páginas se encuentran LeetCode, CodeForces y CodeChef.</p>
+    <h2 id="problemas">4. Problemas</h2>
+    <p>El siguiente listado contiene enlaces a distintos problemas sobre arboles.</p>
     <ul>
-      <li>Problema 1</li>
-      <li>Problema 1</li>
-      <li>Problema 1</li>
-      <li>Problema 1</li>
-      <li>Problema 1</li>
-      <li>Problema 1</li>
-      <li>Problema 1</li>
-      <li>Problema 1</li>
-      <li>Problema 1</li>
+      <li><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree" target="_blank">Convertir un arreglo ordenado en un BST</a></li>
+      <li><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree" target="_blank">Eliminar un nodo en un BST</a></li>
+      <li><a href="https://leetcode.com/problems/insert-into-a-binary-search-tree/description/" target="_blank">Agregar un nodo a un BST</a></li>
+      <li><a href="https://leetcode.com/problems/binary-tree-inorder-traversal" target="_blank">Recorrido <b>in order</b> en un BST</a></li>
     </ul>
 
-    <h2>6. Formulario</h2>
+    <h2 id="fuentes">5. Fuentes</h2>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Tree_(data_structure)" target="_blank">Tree (data structure) - Wikipedia</a></li>
+      <li><a href="https://www.geeksforgeeks.org/binary-search-tree-data-structure/" target="_blank">Binary search tree - GeekForGeeks</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Red%E2%80%93black_tree">Red-black trees - Wikipedia</a></li>
+    </ul>
+
+    <h2 id="formulario">Formulario</h2>
     Si quiere ser notificado de otros articulos sobre otras estructuras de datos por favor diligencie el siguiente formulario.
 
-    <h2>7. Fuentes</h2>
-    <ul>
-      <li><a href="https://en.wikipedia.org/wiki/Tree_(data_structure)" target="_blank">Tree (data structure) - wikipedia</a></li>
-      <li><a href="">La del chorro de qeuvedo</a></li>
-    </ul>
+    <form class="m-3">
+      <div class="form-group my-2">
+        <label for="email">Nombre</label>
+        <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingrese su nombre" maxlength="15">
+      </div>
+
+      <div class="form-group my-2">
+        <label for="email">Correo electrónico</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico" maxlength="50">
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
   </main>
 
   <footer>
